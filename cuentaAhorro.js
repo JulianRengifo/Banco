@@ -1,35 +1,10 @@
+import { cuenta } from "./cuenta.js";
+export class cuentaAhorro extends cuenta{
 
-export class cuentaAhorro{
-    #cliente;
-    #saldo;
-
-    constructor (cliente, numero, agencia, saldo) { // Se definen los parametros privados y publicos
-        this.numero = numero;    // Estos son datos publicos
-        this.agencia = agencia;
-        this.#cliente = cliente;
-        this.#saldo = saldo;
+    constructor(cliente, numero, agencia, saldo) { // En cuenta de ahorro si se puede iniciar el saldo inicial
+        // Desde este constructor se define saldo desde 0 para que en las otras cuentas solo se haga referencia a salod = 0
+        super (cliente,numero, agencia, saldo); //Nuestra palabra reservada super nos permite llamar cosas del padre. //Si yo coloco acá super, él va a referenciar, ¿a quién? Al constructor de la clase padre llamada cuenta.
+        
     }
-
-    depositoEnCuenta(valor) {
-        if (valor > 0)
-            this.#saldo += valor;
-        return this.#saldo;
-    }
-
-    retirarDeCuenta(valor) {
-        if (valor <= this.#saldo)
-            this.#saldo -= valor;
-        return this.#saldo;
-    }
-
-    verSaldo() {
-        return this.#saldo;
-    }
-
-    transferirParaCuenta(valor,cuentaDestino) {
-        this.retirarDeCuenta(valor);
-        cuentaDestino.depositoEnCuenta(valor);
-        valor = 200;
-        valor = valor*1000;
-    }
+    
 }
