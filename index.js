@@ -31,5 +31,3 @@ console.log("Su saldo despues del retiro es de : " + cuentaAhorroJulian.verSaldo
 
 
 
-
-
