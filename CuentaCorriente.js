@@ -16,4 +16,8 @@ export class CuentaCorriente extends cuenta {
          this por el nombre de la clase, entonces ya me refiero a la clase en general y no a una instancia particular sino a todas las instancias. */
     }
 
+    prueba() {
+        super.prueba();
+        console.log('Metodo hijo')
+    }
 }

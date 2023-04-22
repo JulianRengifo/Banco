@@ -48,4 +48,8 @@ export class cuenta {
         valor = 200;
         valor = valor*1000;
     }
+
+    prueba() {
+        console.log('Metodo padre');
+    }
 }
