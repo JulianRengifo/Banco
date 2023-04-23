@@ -15,11 +15,11 @@ const cuentaJulian = new CuentaCorriente( cliente, '1',  '001' ); // Se cambia n
 const cuentaDaniel = new CuentaCorriente( cliente2, '2', '002' );   // cambio a Corriente
 
 const cuentaAhorroJulian = new cuentaAhorro( cliente, '8521', '001', 0); // / Se cambia new cuentaAhorros por --> new cuenta
-/*
+
 console.log(cuentaJulian);
-cuentaJulian.depositoEnCuenta(200);
+cuentaJulian.depositoEnCuenta(150);
 console.log(" Su deposito fue de : " + cuentaJulian.verSaldo());
-cuentaJulian.retirarDeCuenta(60);
+cuentaJulian.retirarDeCuenta(70);
 console.log( "Su saldo despues del retiro es de : " + cuentaJulian.verSaldo());
 
 console.log(cuentaAhorroJulian);
@@ -27,9 +27,9 @@ cuentaAhorroJulian.depositoEnCuenta(500);
 console.log(" Su deposito fue de : " + cuentaAhorroJulian.verSaldo());
 cuentaAhorroJulian.retirarDeCuenta(200);
 console.log("Su saldo despues del retiro es de : " + cuentaAhorroJulian.verSaldo());
-*/
 
-cuentaJulian.prueba();
+
+
 
 
 

@@ -7,4 +7,9 @@ export class cuentaAhorro extends cuenta{
         
     }
     
+    retirarDeCuenta(valor) {
+       // valor = valor * 1.02;     //Ahora las cuentas de ahorro van a tener una comisión de 2% */
+        super.retirarDeCuenta(valor, 2);  // Se invoca al padre para poder utilizar el metodo retirarDeCuenta
+    }
+
 }

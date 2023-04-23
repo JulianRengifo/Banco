@@ -29,11 +29,14 @@ export class cuenta {
         return this.#saldo;
     }
 
-    retirarDeCuenta(valor) {
-        /* if (this.tipo == 'Corriente')
-        valor = valor * 1.05;          //para los retiros de cuentas corrientes, se debe cobrar una comisión de 5%.
-        else if (this.tipo == 'Ahorro')
-            valor = valor * 1.02;     //Ahora las cuentas de ahorro van a tener una comisión de 2% */
+    retirarDeCuenta(valor) {  //valor - comision
+        this._retirarDeCuenta(valor, 0);
+    }
+
+    // Colocando _ antes del metodo se declara como privado
+    //De esta forma lo bueno es que cualquier clase que derive, que extienda de cuenta, no va a necesitar pasar un parámetro de comisión obligatorio
+    _retirarDeCuenta(valor, comision) {  // Se agrega el parametro comision que indicara que en cuentaCorriente sera del 5% y cuentaAhorro sera 2%
+        valor = valor * (1 + comision / 100);
         if (valor <= this.#saldo)
             this.#saldo -= valor;
         return this.#saldo;
