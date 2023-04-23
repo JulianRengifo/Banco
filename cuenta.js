@@ -7,6 +7,11 @@ export class cuenta {
 
     constructor ( cliente, numero, agencia, saldo) { // Se definen los parametros privados y publicos
         //this.tipo = tipo;
+        // en el concepto de herencia de objetos los constructores pasan desde la clase extendida a la clase base.
+        if (this.constructor == cuenta){
+            // si no ponemos la condicion se muestra cuatro veces el mensjae, en el index, tenemos cuatro instancias. Tenemos dos de cuenta corriente, una de cuenta de ahorro y una de cuenta. 
+            console.log('No se debe instanciar objetos de la clase cuenta')
+        }
         this.numero = numero;    // Estos son datos publicos
         this.agencia = agencia;
         this.#cliente = cliente; // Cliente es un atributo privado por eso hacemos uso de set y get
