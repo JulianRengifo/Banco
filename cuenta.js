@@ -10,7 +10,8 @@ export class cuenta {
         // en el concepto de herencia de objetos los constructores pasan desde la clase extendida a la clase base.
         if (this.constructor == cuenta){
             // si no ponemos la condicion se muestra cuatro veces el mensjae, en el index, tenemos cuatro instancias. Tenemos dos de cuenta corriente, una de cuenta de ahorro y una de cuenta. 
-            console.log('No se debe instanciar objetos de la clase cuenta')
+            throw new Error ('No se debe instanciar objetos de la clase cuenta'); //Mensaje de error solo se mostrar cuando para cons cuenta
+            
         }
         this.numero = numero;    // Estos son datos publicos
         this.agencia = agencia;
