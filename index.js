@@ -3,6 +3,7 @@ import {Cliente} from './Cliente.js'
 import {CuentaCorriente} from './CuentaCorriente.js';
 import { cuentaAhorro } from './cuentaAhorro.js';
 import { cuenta } from './cuenta.js';
+import { cuentaNomina } from './cuentaNomina.js';
 
 
 // Se pasan los datos como parametro debido a que se creo un constructor en cliente.js
@@ -29,10 +30,15 @@ console.log(" Su deposito fue de : " + cuentaAhorroJulian.verSaldo());
 cuentaAhorroJulian.retirarDeCuenta(200);
 console.log("Su saldo despues del retiro es de : " + cuentaAhorroJulian.verSaldo());
 */
-const cuentaSimple = new cuenta(cliente, '098', '001', 100);
-console.log(cuentaSimple);
+/* const cuentaSimple = new cuenta(cliente, '098', '001', 100);
+console.log(cuentaSimple); */
 
+const cuentaNominaJulian = new cuentaNomina (cliente, '7412', '001', 50);
+cuentaNominaJulian.depositoEnCuenta(150);
+console.log(cuentaNominaJulian.verSaldo());
 
+cuentaNominaJulian.retirarDeCuenta(50);
+console.log(cuentaNominaJulian.verSaldo());
 
 
 

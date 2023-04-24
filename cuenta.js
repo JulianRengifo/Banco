@@ -35,8 +35,9 @@ export class cuenta {
         return this.#saldo;
     }
 
-    retirarDeCuenta(valor) {  //valor - comision
-        this._retirarDeCuenta(valor, 0);
+    retirarDeCuenta(valor) {  
+ //de esta forma el método es abstracto y se protege. Es decir, no ejecuta nada, como es el concepto de método abstracto, pero a su vez muestra un mensaje para el programador diciéndole que debe implementar.
+        throw new Error ('Debe implementar el metodo retirarDeCuenta en su clase');
     }
 
     // Colocando _ antes del metodo se declara como privado
