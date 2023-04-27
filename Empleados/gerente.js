@@ -7,7 +7,7 @@ export class gerente extends empleado{
     }
 
     verBonificacion(){
-        
+
         const bono = 5;  //this.#salario + this.#salario * bono / 100;
         return super._verBonificacion(bono);
     }

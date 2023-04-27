@@ -1,6 +1,5 @@
-
 export class empleado {
-    
+
     #nombre;
     #dni;
     #salario;

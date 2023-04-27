@@ -1,5 +1,4 @@
 import { cuenta } from "./cuenta.js";
-
 export class cuentaAhorro extends cuenta{
 
     constructor(cliente, numero, agencia, saldo) { // En cuenta de ahorro si se puede iniciar el saldo inicial
