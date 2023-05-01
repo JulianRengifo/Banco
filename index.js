@@ -7,9 +7,13 @@ import {Cliente} from './Cliente.js'
 import { empleado } from './Empleados/empleado.js';
 import { gerente } from './Empleados/gerente.js';
 import { director } from './Empleados/director.js';
+import { sistemaAutenticacion } from './sistemaAutenticacion.js';
 
 // Se pasan los datos como parametro debido a que se creo un constructor en cliente.js
 const cliente = new Cliente('Julian', '13804050', '123224');
+cliente.asignarClave('111111');
+console.log(sistemaAutenticacion.login(cliente, '111111'));
+
 const cliente2 = new Cliente('Daniel', '16979808', '8989');
 /*
 console.log(cliente);
@@ -44,12 +48,20 @@ cuentaNominaJulian.retirarDeCuenta(50);
 console.log(cuentaNominaJulian.verSaldo()); */
 
 const Empleado = new empleado ('Juan', '548741', 10000);
-const Gerente = new gerente ('Michael', '589745', 20000);
-const Director = new director ('Francy', '852369', 50000);
+Empleado.asignarClave('123456');
+console.log(sistemaAutenticacion.login(Empleado, '123456'));  //Login se maneja como estatica
 
+const Gerente = new gerente ('Michael', '589745', 20000);
+Gerente.asignarClave('789456');
+console.log(sistemaAutenticacion.login(Gerente, '789456'));
+
+const Director = new director ('Francy', '852369', 50000);
+/*
 console.log(Empleado.verBonificacion());
 console.log(Gerente.verBonificacion());
 console.log(Director.verBonificacion());
+*/
+
 
 
 
