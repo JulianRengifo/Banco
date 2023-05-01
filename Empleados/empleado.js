@@ -24,7 +24,7 @@ export class empleado {
         this.#clave = clave;
     }
 
-    get clave(){            // Con este get obtenemos el valor de la clave
-        return this.#clave;
+    autenticable(clave){    // se remplaza el get para encapsulamos el atributo login en un metodo     
+        return clave == this.#clave;
     }
 }

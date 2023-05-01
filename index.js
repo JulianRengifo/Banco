@@ -12,7 +12,7 @@ import { sistemaAutenticacion } from './sistemaAutenticacion.js';
 // Se pasan los datos como parametro debido a que se creo un constructor en cliente.js
 const cliente = new Cliente('Julian', '13804050', '123224');
 cliente.asignarClave('111111');
-console.log(sistemaAutenticacion.login(cliente, '111111'));
+console.log(sistemaAutenticacion.login(cliente, '111111')); 
 
 const cliente2 = new Cliente('Daniel', '16979808', '8989');
 /*
