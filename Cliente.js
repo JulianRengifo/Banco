@@ -19,6 +19,6 @@ export class Cliente
 
     //implementación de polimorfismo que tenemos en pantalla, una interfaz retorna la validación y otra interfaz retorna true o retorna false cuando se llama al metodo autenticable.
     autenticable() { // Con este get obtenemos el valor de la clave
-        return false;
+        return true;
     }
 }
